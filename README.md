@@ -6,9 +6,12 @@ This is the Additional Experimental Results for FLTracer ([PDF](https://github.c
 ## Usage
 ### Prepare the dataset
 Image Classification: MNIST, EMNIST, CIFAR10, 
+
 Traffic Sign Classification: German Traffic Sign Recognition Benchmark (GTSRB), 
+
 human Activity Recognition: HAR 
-BDD100K
+
+BDD100K: 
 
 ### Installation
 Our code is implemented and evaluated on pytorch. The following packages are used by our code.
@@ -72,13 +75,14 @@ python main.py  --path result/weights/epoch_xxx                   \
 ### Repeating Experiments
 - run experiments for the four datasets:
   ```python xxxxxx.py --params utils/X.yaml
-  '''
+  ```
 - 
+note - https://github.com/ebagdasa/backdoors101
 
 
 ## Citation
 ``` 123
-'''
+```
 
 ## Acknowledgements
 [https://github.com/ebagdasa/backdoors101](https://github.com/ebagdasa/backdoors101)
