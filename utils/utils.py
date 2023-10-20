@@ -5,51 +5,13 @@ import scipy.stats
 import re
 from numpy import asarray
 from scipy.spatial import distance
-from tensorboard.backend.event_processing import event_accumulator
 pattern1 = r".*_\D*(\d+).npz"
 
 def smooth(y, box_pts):
     box = np.ones(box_pts)/box_pts
     y_smooth = np.convolve(y, box, mode='same')
     return y_smooth
-def extrac_acc_from_ea(path):
-    ea = event_accumulator.EventAccumulator(path)
-    ea.Reload()
-    ea.Tags()  # 查看数据文件中的数据标签
-    choice='False' #'True '
-    acces_item1 = ea.scalars.Items('Test_backdoor_{}/Accuracy_Top-1'.format(choice))  # 查看指定的标量数据
-    access1 = []
-    for i, item in enumerate(acces_item1):
-        access1.append(item.value)
-    choice='True '
-    acces_item2 = ea.scalars.Items('Test_backdoor_{}/Accuracy_Top-1'.format(choice))  # 查看指定的标量数据
-    access2 = []
-    for i, item in enumerate(acces_item2):
-        access2.append(item.value)
-    return access1, access2
-
-def extract_acc_loss(name: str = ''):
-    patternAcc = r"(?<=Top-1:)\s*\d*\.\d*"
-    patternLoss = r"(?<=value:)\s*\d*\.\d*"
-    with open(name) as f:
-        datafile = f.readlines()
-        accList = []
-        backdoor_accList = []
-        for line in datafile:
-            if 'Backdoor False' in line:
-                acc = re.findall(patternAcc, line)
-                loss = re.findall(patternLoss, line)
-                if len(loss) == 0:
-                    loss = [5]
-                accList.append(float(acc[0]))
-            if 'Backdoor True' in line:
-                backdoor_acc = re.findall(patternAcc, line)
-                backdoor_accList.append(float(backdoor_acc[0]))
-    f.close()
-    return accList, backdoor_accList
 def sort_key(s):
-    # 排序关键字匹配
-    # 匹配开头数字序号
     if s:
         try:
             c = re.findall('\d+', s)[0]

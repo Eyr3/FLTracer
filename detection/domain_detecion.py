@@ -71,7 +71,6 @@ class DomainDetection:
         for client_id in range(self.dataset_measurement.clients_num):
             self.client_loader.append(ClientDataLoader(self.dataset_measurement.x,self.dataset_estimate.x,self.dataset_estimate.k7,client_id=client_id))
     def estimate(self,estimator,pretrain=False,client_id=-1):
-        epbar = tqdm(total=self.epoch)
         estimator = estimator.to(self.device)
         print(f"Starting estimating...")
         if pretrain:
@@ -83,12 +82,13 @@ class DomainDetection:
             epoch = self.epoch
             lr = self.lr
         optimizer = torch.optim.Adam([
-            {'params': estimator.parameters(), 'lr': self.lr, 'weight_decay': self.weight_decay,
+            {'params': estimator.parameters(), 'lr': lr, 'weight_decay': self.weight_decay,
              'betas': (0.9, 0.999)},
         ])
         # self.test(self.net, self.start_epoch-1)
         best_state = None
         lowest_loss = 10000
+        epbar = tqdm(total=epoch)
         for epoch in range(epoch):
             estimator.train()
             avg_loss = []
