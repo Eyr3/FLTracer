@@ -5,13 +5,10 @@ This is the Additional Experimental Results for FLTracer ([PDF](https://github.c
 
 ## Usage
 ### Prepare the dataset
-Image Classification: MNIST, EMNIST, CIFAR10, 
-
-Traffic Sign Classification: German Traffic Sign Recognition Benchmark (GTSRB), 
-
-human Activity Recognition: HAR 
-
-BDD100K: 
+- Image Classification: MNIST, EMNIST, CIFAR10,
+- Traffic Sign Classification: German Traffic Sign Recognition Benchmark (GTSRB),
+- human Activity Recognition: HAR
+- Object Classification: [BDD100K dataset](https://www.vis.xyz/bdd100k/)
 
 ### Installation
 Our code is implemented and evaluated on pytorch. The following packages are used by our code.
