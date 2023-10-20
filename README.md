@@ -39,24 +39,24 @@ After saving local updates, you can detect anomalies with various settings using
 
 ```
 python main.py  --path result/weights/epoch_xxx                   \
-                --clients_num 100         \
-                --model resnet,vgg,vit             \
-                --noniid  True,False                 \
-                --lambda_signv 3.0                   \
-                --lambda_sortv 3.0             \
-                --lambda_classv 3.0               \
-                --tau -0.9                    \
-                --corr_first_num 1                  \
-                --save_reference   True,False                   \
-                --reference_path result/reference               \
-                --reference_round 3             \
-                --pretrain_epoch 100      \
-                --epoch 5                 \
-                --update_epoch 0           \
+                --clients_num 100                                 \
+                --model resnet,vgg,vit                            \
+                --noniid  True,False                              \
+                --lambda_signv 3.0                                \
+                --lambda_sortv 3.0                                \
+                --lambda_classv 3.0                               \
+                --tau -0.9                                        \
+                --corr_first_num 1                                \
+                --save_reference   True,False                     \
+                --reference_path result/reference                 \
+                --reference_round 3                               \
+                --pretrain_epoch 100                              \
+                --epoch 5                                         \
+                --update_epoch 0                                  \
 
                 (optional - checkpoint)
-                --save_reference   True,False
-                --save_model_path result/model
+                --save_reference   True,False                     \
+                --save_model_path result/model                    \
 ```
 - `path` : is should be matched with your path to be detected. 
 - `lambda_signv`, `lambda_sortv`, `lambda_classv`: are thresholds in Local Anomaly Detection. We use MAD to detect anomalies, with default settings of 2.5, 3.0, or higher.
