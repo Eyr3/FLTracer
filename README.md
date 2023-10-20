@@ -3,14 +3,8 @@ FLTracer: Accurate Poisoning Attack Provenance in Federated Learning
 
 This is the Additional Experimental Results for FLTracer ([PDF](https://github.com/Eyr3/FLTracer/blob/main/FLTracer_Additional_Experimental_Results.pdf)).
 
-## Usage
-### Prepare the dataset
-- Image Classification: MNIST, EMNIST, CIFAR10,
-- Traffic Sign Classification: German Traffic Sign Recognition Benchmark (GTSRB),
-- Human Activity Recognition: HAR
-- Object Classification: [BDD100K dataset](https://www.vis.xyz/bdd100k/)
 
-### Installation
+## Installation
 Our code is implemented and evaluated on pytorch. The following packages are used by our code.
 
 - `torch==2.0.1`
@@ -21,7 +15,16 @@ Our code is implemented and evaluated on pytorch. The following packages are use
 
 Our code is evaluated on `Python 3.8.11`.
 
-### Saving Updates
+
+## Usage
+### Prepare Datasets
+- Image Classification: MNIST, EMNIST, CIFAR10,
+- Traffic Sign Classification: German Traffic Sign Recognition Benchmark (GTSRB),
+- Human Activity Recognition: HAR
+- Object Classification: [BDD100K dataset](https://www.vis.xyz/bdd100k/)
+
+
+### Save Updates
 To detect attackers, you should provide local updates of suspect clients, which need to have the following folder structure. 
 ```shell
 results
@@ -39,7 +42,7 @@ results
     < contains all saved models >
 ```
 
-### Anomaly Detection
+### Detect Anomalies
 After saving local updates, you can detect anomalies with various settings using the following command:
 
 ```
@@ -69,7 +72,7 @@ python main.py  --path result/weights/epoch_xxx                   \
 - `reference_path` : is should be matched with your reference path for Domain Detection. 
 - `update_epoch` : is the epoch of updating the Kalman Filter estimator while detecting.
 
-### Repeating Experiments
+### Repeate Experiments
 - run experiments for the four datasets:
   ```python xxxxxx.py --params utils/X.yaml
   ```
