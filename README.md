@@ -3,8 +3,8 @@ FLTracer: Accurate Poisoning Attack Provenance in Federated Learning
 
 This is the Additional Experimental Results for FLTracer ([PDF](https://github.com/Eyr3/FLTracer/blob/main/FLTracer_Additional_Experimental_Results.pdf)).
 
-## DEPENDENCIES
-Our code is implemented and tested on pytorch. The following packages are used by our code.
+## Dependencies
+Our code is implemented and evaluated on pytorch. The following packages are used by our code.
 
 - `torch==2.0.1`
 - `numpy==1.24.3`
@@ -12,12 +12,12 @@ Our code is implemented and tested on pytorch. The following packages are used b
 - `filterpy==1.4.5`
 - `tqdm==4.66.1`
 
-Our code is tested on `Python 3.8.11`.
+Our code is evaluated on `Python 3.8.11`.
 
 
-## HOWTO
+## Usage
 ### Saving Updates
-To detect attackers, you should provide local updates of suspect clients, which need to has the following folder structure. 
+To detect attackers, you should provide local updates of suspect clients, which need to have the following folder structure. 
 ```shell
 results
 |-- weights < updates need to be detected >
