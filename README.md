@@ -7,7 +7,7 @@ This is the Additional Experimental Results for FLTracer ([PDF](https://github.c
 ### Prepare the dataset
 - Image Classification: MNIST, EMNIST, CIFAR10,
 - Traffic Sign Classification: German Traffic Sign Recognition Benchmark (GTSRB),
-- human Activity Recognition: HAR
+- Human Activity Recognition: HAR
 - Object Classification: [BDD100K dataset](https://www.vis.xyz/bdd100k/)
 
 ### Installation
