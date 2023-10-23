@@ -74,8 +74,7 @@ python main.py  --path result/weights/epoch_xxx                   \
 
 ### Repeat Experiments
 - run experiments for the four datasets:
-  ```python xxxxxx.py --params utils/X.yaml
-  ```
+  ```python main.py --params config/patch_BN_backdoor_detect.yaml ```
 - 
 note - https://github.com/ebagdasa/backdoors101
 
