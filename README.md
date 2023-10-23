@@ -46,38 +46,31 @@ results
 After saving local updates, you can detect anomalies with various settings using the following command:
 
 ```
-python main.py  --path result/weights/epoch_xxx                   \
-                --clients_num 100                                 \
-                --model resnet,vgg,vit                            \
-                --noniid  True,False                              \
-                --lambda_signv 3.0                                \
-                --lambda_sortv 3.0                                \
-                --lambda_classv 3.0                               \
-                --tau -0.9                                        \
-                --corr_first_num 1                                \
-                --save_reference   True,False                     \
-                --reference_path result/reference                 \
-                --reference_round 3                               \
-                --pretrain_epoch 100                              \
-                --epoch 5                                         \
-                --update_epoch 0                                  \
-
-                (optional - checkpoint)
-                --save_reference   True,False                     \
-                --save_model_path result/model                    \
+python main.py  --params config/add_noise_detect.yaml
 ```
-- `path` : is should be matched with your path to be detected. 
+The following is a description of some parameters in the configuration file:
+- `path` : is should be matched with your path to be detected.
+- `model`: is the model type of local updates, which support resnet, vgg, and vit.
+- `clients_num`: is the number of participating clients.
 - `lambda_signv`, `lambda_sortv`, `lambda_classv`: are thresholds in Local Anomaly Detection. We use MAD to detect anomalies, with default settings of 2.5, 3.0, or higher.
 - `tau` : is the threshold in Task Detection, with default settings of -0.9.
+- `corr_first_num`: is the number of malicious clients, if unknown, please set the same value as `clients_num`.
 - `reference_path` : is should be matched with your reference path for Domain Detection. 
 - `update_epoch` : is the epoch of updating the Kalman Filter estimator while detecting.
 
 ### Repeat Experiments
-- run experiments for the four datasets:
-  ```python main.py --params config/patch_BN_backdoor_detect.yaml ```
-- 
-note - https://github.com/ebagdasa/backdoors101
+We provide all experimental examples on CIFAR10 ResNet. Run experiments for add noise attack detection:
+```python main.py --params config/add_noise_detect.yaml ```
+Run experiments for dirty label attack detection:
+```python main.py --params config/dirty_label_detect.yaml ```
+Run experiments for sign flipping attack detection:
+```python main.py --params config/sign_flipping_detect.yaml ```
+Run experiments for adaptive untargeted attack detection, e.g. MB attack and Fang attack:
+```python main.py --params config/adaptive_untarget_attack_detect.yaml ```
+Run experiments for backdoor attack detection:
+```python main.py --params config/patch_BN_backdoor_detect.yaml ```
 
+In our experiments, we use [backdoors101](https://github.com/ebagdasa/backdoors101) to train and attack models to prepare the detecting data.
 
 ## Citation
 ``` 123
