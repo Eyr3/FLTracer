@@ -42,6 +42,7 @@ results
     < contains all saved models >
 ```
 
+
 ### Detect Anomalies
 After saving local updates, you can detect anomalies with various settings using the following command:
 
@@ -58,33 +59,43 @@ The following is a description of some parameters in the configuration file:
 - `reference_path`: it should be matched with your reference path for Domain Detection. 
 - `update_epoch`: is the epoch of updating the Kalman Filter estimator while detecting.
 
+
 ### Repeat Experiments
-- We provide all experimental examples on CIFAR10 ResNet. Run experiments for add noise attack detection:
+
+We provide all experimental examples on CIFAR10 ResNet.
+
+- Run experiments for add noise attack detection:
+
 ```
 python main.py --params config/add_noise_detect.yaml
 ```
 
 - Run experiments for dirty label attack detection:
+
 ```
 python main.py --params config/dirty_label_detect.yaml
 ```
 
 - Run experiments for sign-flipping attack detection:
+
 ```
 python main.py --params config/sign_flipping_detect.yaml
 ```
 
 - Run experiments for adaptive untargeted attack detection, e.g. MB attack and Fang attack:
+
 ```
 python main.py --params config/adaptive_untarget_attack_detect.yaml
 ```
 
 - Run experiments for backdoor attack detection:
+
 ```
 python main.py --params config/patch_BN_backdoor_detect.yaml
 ```
 
 Our experiments use [backdoors101](https://github.com/ebagdasa/backdoors101) to train models and launch attacks to prepare for the detection of model updates.
+
 
 ## Citation
 ```
