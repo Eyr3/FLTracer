@@ -49,31 +49,41 @@ After saving local updates, you can detect anomalies with various settings using
 python main.py  --params config/add_noise_detect.yaml
 ```
 The following is a description of some parameters in the configuration file:
-- `path` : is should be matched with your path to be detected.
+- `path`: is should be matched with your path to be detected.
 - `model`: is the model type of local updates, which support resnet, vgg, and vit.
 - `clients_num`: is the number of participating clients.
 - `lambda_signv`, `lambda_sortv`, `lambda_classv`: are thresholds in Local Anomaly Detection. We use MAD to detect anomalies, with default settings of 2.5, 3.0, or higher.
-- `tau` : is the threshold in Task Detection, with default settings of -0.9.
+- `tau`: is the threshold in Task Detection, with default settings of -0.9.
 - `corr_first_num`: is the number of malicious clients, if unknown, please set the same value as `clients_num`.
-- `reference_path` : is should be matched with your reference path for Domain Detection. 
-- `update_epoch` : is the epoch of updating the Kalman Filter estimator while detecting.
+- `reference_path`: is should be matched with your reference path for Domain Detection. 
+- `update_epoch`: is the epoch of updating the Kalman Filter estimator while detecting.
 
 ### Repeat Experiments
 We provide all experimental examples on CIFAR10 ResNet. Run experiments for add noise attack detection:
 ```python main.py --params config/add_noise_detect.yaml ```
+
 Run experiments for dirty label attack detection:
 ```python main.py --params config/dirty_label_detect.yaml ```
-Run experiments for sign flipping attack detection:
+
+Run experiments for sign-flipping attack detection:
 ```python main.py --params config/sign_flipping_detect.yaml ```
+
 Run experiments for adaptive untargeted attack detection, e.g. MB attack and Fang attack:
 ```python main.py --params config/adaptive_untarget_attack_detect.yaml ```
+
 Run experiments for backdoor attack detection:
 ```python main.py --params config/patch_BN_backdoor_detect.yaml ```
 
 In our experiments, we use [backdoors101](https://github.com/ebagdasa/backdoors101) to train and attack models to prepare the detecting data.
 
 ## Citation
-``` 123
+```
+@article{zhang2023text,
+  title={FLTracer: Accurate Poisoning Attack Provenance in Federated Learning},
+  author={Zhang, Xinyu and Liu, Qingyun and Ba, Zhongjie and Hong, Yuan and Zheng, Tianhang and Lin, Feng and Lu, Li and Ren, Kui},
+  journal={arXiv preprint arXiv:2307.16630},
+  year={2023}
+}
 ```
 
 
