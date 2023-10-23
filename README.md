@@ -62,7 +62,7 @@ The following is a description of some parameters in the configuration file:
 
 ### Repeat Experiments
 
-We provide all experimental examples on CIFAR10 ResNet.
+We provide all experimental examples on CIFAR10 (ResNet18).
 
 - Run experiments for add noise attack detection:
 
