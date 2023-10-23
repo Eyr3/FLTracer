@@ -1,0 +1,11 @@
+path: result/weights/epoch_xxx
+clients_num: 100
+model: resnet
+noniid: True
+lambda_signv: 3.0
+lambda_sortv: 7.0
+lambda_classv: 5.0
+tau: -0.95
+corr_first_num: 0
+
+
