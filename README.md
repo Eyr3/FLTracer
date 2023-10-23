@@ -62,6 +62,8 @@ The following is a description of some parameters in the configuration file:
 
 ### Repeat Experiments
 
+Our experiments use [backdoors101](https://github.com/ebagdasa/backdoors101) to train models and launch attacks to prepare for the detection of model updates.
+
 We provide all experimental examples on CIFAR10 (ResNet18).
 
 - Run experiments for add noise attack detection:
@@ -93,8 +95,6 @@ python main.py --params config/adaptive_untarget_attack_detect.yaml
 ```
 python main.py --params config/patch_BN_backdoor_detect.yaml
 ```
-
-Our experiments use [backdoors101](https://github.com/ebagdasa/backdoors101) to train models and launch attacks to prepare for the detection of model updates.
 
 
 ## Citation
