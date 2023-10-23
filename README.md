@@ -72,7 +72,7 @@ python main.py  --path result/weights/epoch_xxx                   \
 - `reference_path` : is should be matched with your reference path for Domain Detection. 
 - `update_epoch` : is the epoch of updating the Kalman Filter estimator while detecting.
 
-### Repeate Experiments
+### Repeat Experiments
 - run experiments for the four datasets:
   ```python xxxxxx.py --params utils/X.yaml
   ```
