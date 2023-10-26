@@ -20,8 +20,8 @@ Our code is evaluated on `Python 3.8.11`.
 ### Prepare Datasets
 - Image Classification: MNIST, EMNIST, CIFAR10,
 - Traffic Sign Classification: German Traffic Sign Recognition Benchmark (GTSRB),
-- Human Activity Recognition: HAR
-- Object Classification: [BDD100K dataset](https://www.vis.xyz/bdd100k/)
+- Human Activity Recognition: HAR,
+- Object Classification: [BDD100K dataset](https://www.vis.xyz/bdd100k/).
 
 
 ### Save Updates
