@@ -101,8 +101,8 @@ python main.py --params config/patch_BN_backdoor_detect.yaml
 ```
 @article{zhang2023fltracer,
   title={FLTracer: Accurate Poisoning Attack Provenance in Federated Learning},
-  author={Zhang, Xinyu and Liu, Qingyun and Ba, Zhongjie and Hong, Yuan and Zheng, Tianhang and Lin, Feng and Lu, Li and Ren, Kui},
-  journal={arXiv preprint arXiv:2307.16630},
+  author={Zhang, Xinyu and Liu, Qingyu and Ba, Zhongjie and Hong, Yuan and Zheng, Tianhang and Lin, Feng and Lu, Li and Ren, Kui},
+  journal={arXiv preprint arXiv:2310.13424},
   year={2023}
 }
 ```
