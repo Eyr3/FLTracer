@@ -1,5 +1,5 @@
 # FLTracer
-FLTracer: Accurate Poisoning Attack Provenance in Federated Learning
+This repo is the official implementation of [FLTracer: Accurate Poisoning Attack Provenance in Federated Learning](https://arxiv.org/pdf/2310.13424.pdf).
 
 This is the Additional Experimental Results for FLTracer ([PDF](https://github.com/Eyr3/FLTracer/blob/main/FLTracer_Additional_Experimental_Results.pdf)).
 
