@@ -1,5 +1,5 @@
 # FLTracer
-This repo is the official implementation of [FLTracer: Accurate Poisoning Attack Provenance in Federated Learning, IEEE Transactions on Information Forensics and Security (TDSC), 2024](https://ieeexplore.ieee.org/abstract/document/10549523), Xinyu Zhang, Qingyu Liu, Zhongjie Ba, Yuan Hong, Tianhang Zheng, Feng Lin, Li Lu, Kui Ren.
+This repo is the official implementation of [FLTracer: Accurate Poisoning Attack Provenance in Federated Learning, IEEE Transactions on Information Forensics and Security (TIFS), 2024](https://ieeexplore.ieee.org/abstract/document/10549523), Xinyu Zhang, Qingyu Liu, Zhongjie Ba, Yuan Hong, Tianhang Zheng, Feng Lin, Li Lu, Kui Ren.
 
 This is the Additional Experimental Results (Appendix) for FLTracer ([PDF](https://github.com/Eyr3/FLTracer/blob/main/FLTracer_appendix.pdf)).
 
