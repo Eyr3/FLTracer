@@ -1,5 +1,5 @@
 # FLTracer
-This repo is the official implementation of [FLTracer: Accurate Poisoning Attack Provenance in Federated Learning](https://arxiv.org/pdf/2310.13424.pdf).
+This repo is the official implementation of [FLTracer: Accurate Poisoning Attack Provenance in Federated Learning, IEEE Transactions on Information Forensics and Security (TDSC), 2024]([https://arxiv.org/pdf/2310.13424.pdf](https://ieeexplore.ieee.org/abstract/document/10549523)), Xinyu Zhang, Qingyu Liu, Zhongjie Ba, Yuan Hong, Tianhang Zheng, Feng Lin, Li Lu, Kui Ren.
 
 This is the Additional Experimental Results (Appendix) for FLTracer ([PDF](https://github.com/Eyr3/FLTracer/blob/main/FLTracer_appendix.pdf)).
 
@@ -99,11 +99,12 @@ python main.py --params config/patch_BN_backdoor_detect.yaml
 
 ## Citation
 ```
-@article{zhang2023fltracer,
-  title={FLTracer: Accurate Poisoning Attack Provenance in Federated Learning},
+@article{zhang2024fltracer,
+  title={Fltracer: Accurate poisoning attack provenance in federated learning},
   author={Zhang, Xinyu and Liu, Qingyu and Ba, Zhongjie and Hong, Yuan and Zheng, Tianhang and Lin, Feng and Lu, Li and Ren, Kui},
-  journal={arXiv preprint arXiv:2310.13424},
-  year={2023}
+  journal={IEEE Transactions on Information Forensics and Security},
+  year={2024},
+  publisher={IEEE}
 }
 ```
 
