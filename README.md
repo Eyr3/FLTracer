@@ -41,7 +41,7 @@ results
 |-- model
     < contains all saved models >
 ```
-
+we share [links](https://pan.baidu.com/s/1CGUfjILsscq9XWpehSygcg?pwd=tykw) to the 10 local updates for an epoch and their reference updates. You need to place the compressed file in the project directory and unzip it. Remember to modify the parameters in the blind_backdoor_detect.yaml file to ensure that the updates can be read successfully.
 
 ### Detect Anomalies
 After saving local updates, you can detect anomalies with various settings using the following command:
